@@ -43,16 +43,46 @@
 							<td>${fn:split(vo.indate," ")[0]}</td>
 						</tr>
 						<tr>
-							<td colspan="2" align="center">
-								<a href="boardUpdateForm.do?idx=${vo.idx}" class="btn btn-info">수정화면</a>
+							<td colspan="2" align="center"><a
+								href="boardUpdateForm.do?idx=${vo.idx}" class="btn btn-info">수정화면</a>
 								<a href="boardDelete.do?idx=${vo.idx}" class="btn btn-danger">삭제화면</a>
-								<a href="boardList.do" class="btn btn-warning">목록</a>
-							</td>
+								<a href="boardList.do" class="btn btn-warning">목록</a></td>
 						</tr>
 					</tbody>
 				</table>
+
+				<form action="replyInsert.do" " method="post">
+					<input type="hidden" name="boardnum" value="${vo.idx }">
+
+					<table style="width: 100%;">
+						<tr>
+							<td style="padding: 5px" width="150px">&nbsp;<input type="text"
+								name="writer" class="form-control"></td>
+							<td style="padding: 5px">&nbsp;<input type="text"
+								name="content" class="form-control">
+							</td>
+							<td style="padding: 5px">&nbsp;
+								<button type="submit" class="form-control">댓글
+							</td>
+						</tr>
+
+						<tr>
+							<td style="padding: 5px" width="150px">작성자</td>
+							<td style="padding: 5px" colspan="2">댓글</td>
+						</tr>
+
+						<c:forEach items="${list}" var="vo">
+							<tr>
+								<td style="padding: 5px" width="150px">${vo.writer }</td>
+								<td style="padding: 5px" colspan="2">${vo.content }</td>
+							</tr>
+						</c:forEach>
+
+					</table>
+				</form>
+
 			</div>
-			<div class="panel-footer">스프링게시판 - 박병관</div>
+			<div class="panel-footer">스프링게시판 - 아년지</div>
 		</div>
 	</div>
 

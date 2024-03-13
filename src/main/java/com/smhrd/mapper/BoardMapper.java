@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import com.smhrd.entity.Board;
+import com.smhrd.entity.Reply;
 
 @Mapper
 public interface BoardMapper {
@@ -21,5 +22,17 @@ public interface BoardMapper {
 	public void boardInsert(Board vo);
 	
 	public void boardDelete(int idx);
+	
+	public void boardUpdate(Board vo);
+
+	public void boardCount(int idx);
+
+	public void replyInsert(Reply vo);
+
+	public List<Reply> replyList(int idx);
+
+
+	
+	
 	
 }

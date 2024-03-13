@@ -58,7 +58,7 @@
 					</table>
 				</form>
 			</div>
-			<div class="panel-footer">스프링게시판 - 박병관</div>
+			<div class="panel-footer">스프링게시판 - 아년지</div>
 		</div>
 	</div>
 

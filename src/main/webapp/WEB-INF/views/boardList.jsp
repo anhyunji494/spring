@@ -46,7 +46,7 @@
             </table>
             <a href="boardForm.do" class = "btn btn-warning">글쓰기</a>
          </div>
-         <div class="panel-footer">스프링게시판 -박덕근</div>
+         <div class="panel-footer">스프링게시판 - 아년지</div>
       </div>
    </div>
 
